@@ -44,7 +44,7 @@
 //hero-section
 
 .hero-section {
-  padding: 35px 0 100px ;
+  padding: 35px 0 100px;
 
   &__section__title{
     font-size: 48px;
@@ -54,6 +54,7 @@
     width: 100%;
     padding: 40px 0 0;
   }
+
 }
 
 //about-me
@@ -62,6 +63,7 @@
   background-color: #F6F6F6;
   padding: 100px 0;
   text-align: center;
+
 
   &__text-holder{
     margin: 0 auto;
@@ -72,6 +74,14 @@
   &__text{
     font-size: 18px;
     padding-bottom: 10px;
+
+    @include breakpoint('lg'){
+      font-size: 25px;
+    }
+
+    @include breakpoint('sm'){
+      font-size: 25px;
+    }
   }
 }
 
@@ -90,11 +100,33 @@
   font-size: 18px;
 }
 
-.skills__column-holder{
+.skills__column-holder {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 80px 0 0;
+  margin: 0 auto;
+
+  @include breakpoint("md") {
+    width: 25%;
+
+  }
+
+  @include breakpoint("sm") {
+    width: 25%;
+
+  }
+
+  @include breakpoint("xs") {
+    width: 50%;
+
+  }
+
+  @include breakpoint("xxs") {
+    width: 50%;
+
+  }
+
 }
 
 .skills__column{
@@ -148,6 +180,7 @@
   width: 100%;
   max-width: 340px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .footer__title-holder{
