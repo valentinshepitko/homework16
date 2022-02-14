@@ -1,19 +1,64 @@
 //header
 
+.header{
+  position: relative;
+
+  &.active {
+    .nav{
+      transform: translateX(0);
+    }
+  }
+}
+
+
+
 .header__holder{
   padding: 23px 0 0;
 }
 
 .nav {
+
+  @include breakpoint('md'){
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 2;
+    background-color: white;
+    transform: translateX(100%);
+    transition: all ease-in-out 0.3s;
+  }
+
   &__list{
     list-style: none;
     text-align: center;
     margin-bottom: 30px;
+
+    @include breakpoint('md'){
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 20px;
+    }
   }
 
  &__item{
    display: inline-block;
    padding: 0 20px;
+
+   @include breakpoint('md'){
+     padding: 0;
+     width: 100%;
+   }
+
+  a{
+    @include breakpoint('md'){
+      display: block;
+      text-align: center;
+      padding: 10px;
+    }
+  }
  }
 
  &__link{
@@ -41,6 +86,61 @@
   }
 }
 
+.nav-opener {
+  display: none;
+
+  @include breakpoint('md'){
+    display: block;
+    position: absolute;
+    top: 300%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &:before{
+    content: '';
+    width: 40px;
+    height: 2px;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform:translateX(-50%);
+    background-color: #828282;
+  }
+
+  &:after{
+    content: '';
+    width: 40px;
+    height: 2px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform:translateX(-50%);
+    background-color: #828282;
+  }
+
+
+  span {
+    width: 40px;
+    height: 2px;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform:translate(-50% -50%);
+    background-color: #828282;
+  }
+}
+
+
 //hero-section
 
 .hero-section {
@@ -54,7 +154,6 @@
     width: 100%;
     padding: 40px 0 0;
   }
-
 }
 
 //about-me
@@ -63,7 +162,6 @@
   background-color: #F6F6F6;
   padding: 100px 0;
   text-align: center;
-
 
   &__text-holder{
     margin: 0 auto;
@@ -126,7 +224,6 @@
     width: 50%;
 
   }
-
 }
 
 .skills__column{
