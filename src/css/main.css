@@ -152,6 +152,8 @@ img {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-color: #828282;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
 }
 .nav-opener:after {
   content: "";
@@ -164,6 +166,8 @@ img {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-color: #828282;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
 }
 .nav-opener span {
   width: 40px;
@@ -175,6 +179,8 @@ img {
   -webkit-transform: translate(-50% -50%);
           transform: translate(-50% -50%);
   background-color: #828282;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
 }
 
 .hero-section {
