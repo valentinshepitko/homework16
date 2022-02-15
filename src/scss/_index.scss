@@ -230,22 +230,18 @@
 
   @include breakpoint("md") {
     width: 50%;
-
   }
 
   @include breakpoint("sm") {
     width: 25%;
-
   }
 
   @include breakpoint("xs") {
     width: 50%;
-
   }
 
   @include breakpoint("xxs") {
     width: 50%;
-
   }
 }
 
