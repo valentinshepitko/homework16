@@ -241,7 +241,7 @@ img {
 }
 @media (max-width: 769px) {
   .skills__column-holder {
-    width: 25%;
+    width: 50%;
   }
 }
 @media (max-width: 641px) {
@@ -262,6 +262,7 @@ img {
 
 .skills__column {
   max-width: 160px;
+  margin: 0 auto;
 }
 
 .skills__desc {
